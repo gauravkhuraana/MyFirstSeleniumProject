@@ -2,9 +2,9 @@ package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
@@ -15,7 +15,7 @@ public class AppTest {
      */
     @Test
     public void shouldAnswerWithTrue() {
-        assertTrue(true);
+        Assert.assertTrue(true);
     }
 
 
@@ -23,6 +23,7 @@ public class AppTest {
     public void myfirstTest() {
         WebDriver driver = WebDriverManager.chromedriver().create();
         driver.get("https://google.com");
+        Assert.assertTrue(true);
         driver.quit();
     }
 
@@ -30,6 +31,7 @@ public class AppTest {
     public void myfirstTestInFirefox() {
         WebDriver driver = WebDriverManager.firefoxdriver().create();
         driver.get("https://google.com");
+        Assert.assertTrue(true);
         driver.quit();
     }
 
@@ -37,6 +39,7 @@ public class AppTest {
     public void myfirstTestInEdge() {
         WebDriver driver = WebDriverManager.edgedriver().create();
         driver.get("https://google.com");
+        Assert.assertTrue(true);
         driver.quit();
     }
 }
